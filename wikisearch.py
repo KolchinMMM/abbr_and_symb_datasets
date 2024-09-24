@@ -1,7 +1,7 @@
 import wikipedia
 import warnings
 import razdel
-from make_sokr import has_sokr, has_measure, is_sokr_itself
+from make_sokr import has_sokr, has_measure, is_sokr_itself, has_long
 
 
 def write_dict_to_file(dictionary, path, header):
@@ -56,6 +56,11 @@ def main():
                                 dict_res_measure[measure] = 0
                             dict_res_measure[measure] += 1
                             break
+                    another_text = has_long(new_sentence)
+                    while not another_text:
+                        new_sentence = another_text
+                        another_text = has_long(another_text)
+
                     if new_sentence != sentence and not flag_has_abbr:
                         print("Пошло добро")
                         file_abbreviations.write(f'"{new_sentence}","{sentence}"\n')

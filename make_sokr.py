@@ -17,8 +17,7 @@ def is_composit_sokr(word, list_measure, list_prefix):
 
 
 def is_sokr_itself(word):
-    return (word in phds.values()
-            or word in measures.values()
+    return (word in measures.values()
             or word in sokr.values()
             or is_composit_sokr(word, measures_doli.values(), prefixes_doli.values())
             or is_composit_sokr(word, measures_kratn.values(), prefixes_kratn.values()))
@@ -55,6 +54,12 @@ def has_measure_with_prefix(word, prefix_dict, prefix_keys, measure_dict, measur
     return ""
 
 
+def has_long(text):
+    for line in phds_keys:
+        if line in text:
+            return text.replace(line, phds[line])
+    return ""
+
 sokr, sokr_keys = read_csv("sokr")
 measures, measures_keys = read_csv("measures")
 measures_doli, measures_doli_keys =read_csv("measures_doli")
@@ -66,10 +71,12 @@ prefixes_kratn, prefixes_kratn_keys = read_csv("prefixes_kratn")
 
 def main():
     print(has_sokr("года"))
-    print(is_sokr_itself("годы"))
+    print(has_long("кандидат технических наук и без рук"))
+
 
 
 
 if __name__ == "__main__":
     main()
+
 
