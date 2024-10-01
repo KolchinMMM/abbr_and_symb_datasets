@@ -4,9 +4,17 @@ import re
 
 
 def read_csv(filename):
-    with open(f'generated_pairs/{filename}', encoding="utf-8") as file:
+    with open(f'{filename}', encoding="utf-8") as file:
         dictishe = dict(csv.reader(file, delimiter=","))
         return dictishe
+
+
+def read_text(filename):
+    with open(f"generated_pairs/{filename}", "r", encoding="utf8",) as file:
+        f = file.readlines()
+        for i in f:
+            a, b = i.rsplit(",")
+            print(a, b)
 
 
 def write_csv(path, dictionary):
@@ -15,18 +23,30 @@ def write_csv(path, dictionary):
             file.write(f'"{i}","{v}"\n')
 
 
-
-def process(name):
+def process(name, arr, directory):
     dict_s = dict()
     for path in arr:
         if re.search(name, path):
-            print(directory_path)
-            print(path)
-            dict_s = dict_s | read_csv(directory_path + path)
+            dict_s = dict_s | read_csv(directory + path)
     write_csv(f"res/{name}_final.csv", dict_s)
 
 
-def preprocess(name):
+def process_count_dicts(name, arr, directory):
+    dict_s = dict()
+    for path in arr:
+        if re.search(name, path):
+            new_dict = read_csv(f"{directory}/{path}")
+            for key, value in new_dict.items():
+                if not value.isdecimal():
+                    continue
+                if key not in dict_s.keys():
+                    dict_s[key] = 0
+                print(key, value)
+                dict_s[key] += int(value)
+    write_csv(f"res/{name}_final.csv", dict_s)
+
+
+def preprocess(name, arr):
     for path in arr:
         if re.search(name, path):
             with open(f"generated_pairs/{path}", "r", encoding="utf-8") as file:
@@ -40,9 +60,11 @@ def preprocess(name):
 
 
 directory_path = ""
-arr = os.listdir(f"generated_pairs")
+arr_generated_pairs = os.listdir(f"generated_pairs")
+arr_results = os.listdir(f"results")
 # preprocess("abbreviations")
-process("abbreviations")
 
+process_count_dicts("measure", arr_results, "results")
 
+#process("abbreviations", arr_generated_pairs)
 

@@ -19,8 +19,8 @@ def is_composit_sokr(word, list_measure, list_prefix):
 def is_sokr_itself(word):
     return (word in measures.values()
             or word in sokr.values()
-            or is_composit_sokr(word, measures_doli.values(), prefixes_doli.values())
-            or is_composit_sokr(word, measures_kratn.values(), prefixes_kratn.values()))
+            or is_composit_sokr(word, measures_with_prefixes.values(), prefixes_doli.values())
+            or is_composit_sokr(word, measures_with_prefixes.values(), prefixes_kratn.values()))
 
 
 def has_sokr(word):
@@ -28,10 +28,10 @@ def has_sokr(word):
 
 
 def has_measure(word):
-    doli = has_measure_with_prefix(word, prefixes_doli, prefixes_doli_keys, measures_doli, measures_doli_keys)
+    doli = has_measure_with_prefix(word, prefixes_doli, prefixes_doli_keys, measures_with_prefixes, measures_doli_keys)
     if doli:
         return doli
-    kratn = has_measure_with_prefix(word, prefixes_kratn, prefixes_kratn_keys, measures_kratn, measures_kratn_keys)
+    kratn = has_measure_with_prefix(word, prefixes_kratn, prefixes_kratn_keys, measures_with_prefixes, measures_doli_keys)
     if kratn:
         return kratn
     if word in measures_keys:
@@ -60,10 +60,10 @@ def has_long(text):
             return text.replace(line, phds[line])
     return ""
 
+
 sokr, sokr_keys = read_csv("sokr")
 measures, measures_keys = read_csv("measures")
-measures_doli, measures_doli_keys =read_csv("measures_doli")
-measures_kratn, measures_kratn_keys = read_csv("measures_kratn")
+measures_with_prefixes, measures_doli_keys = read_csv("measures_with_prefixes")
 phds, phds_keys = read_csv("phds")
 prefixes_doli, prefixes_doli_keys = read_csv("prefixes_doli")
 prefixes_kratn, prefixes_kratn_keys = read_csv("prefixes_kratn")

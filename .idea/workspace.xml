@@ -5,28 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ee9fd0e-005e-4874-9584-cffd11cdb590" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/csvs/measures_with_prefixes.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csvs/sokr.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csvs/sokr.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csvs/symbols.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csvs/symbols.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/generated_pairs/abbreviations1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations2.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations3.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated_pairs/already_abbr2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/join_files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated_pairs/already_abbr3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/abbreviations_final.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated_pairs/already_abbr4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations6.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations7.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/symbols.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/symbols1.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/symbols2.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/symbols3.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/symbols4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols6.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols7.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_count6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_count7.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_sentences.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_sentences1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_sentences1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generated_pairs/symbols_sentences1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_sentences2.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_sentences3.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_sentences4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_symbols.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_symbols.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_sentences5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_sentences6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_sentences7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/join_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/join_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_sokr.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_sokr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/long7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/long7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/measure1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/measure1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/measure7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/measure7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/sokr1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/sokr1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/sokr7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/sokr7.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wikisearch_stanza.py" beforeDir="false" afterPath="$PROJECT_DIR$/wikisearch_stanza.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
