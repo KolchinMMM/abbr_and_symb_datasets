@@ -55,16 +55,17 @@ def preprocess(name, arr):
                 file.write("question,answer\n")
                 for i, v in enumerate(buff):
                     if v.count('"') == 4:
-                        file.write(f"{v}")
-
+                        file.write(f"{v.replace('..', '.')}")
 
 
 directory_path = ""
 arr_generated_pairs = os.listdir(f"generated_pairs")
 arr_results = os.listdir(f"results")
-# preprocess("abbreviations")
+preprocess("abbreviations", arr_generated_pairs)
 
-process_count_dicts("measure", arr_results, "results")
+process("abbreviations", arr_generated_pairs, "generated_pairs/")
 
-#process("abbreviations", arr_generated_pairs)
+# process_count_dicts("measure", arr_results, "results")
+
+
 

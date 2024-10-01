@@ -28,10 +28,10 @@ def has_sokr(word):
 
 
 def has_measure(word):
-    doli = has_measure_with_prefix(word, prefixes_doli, prefixes_doli_keys, measures_with_prefixes, measures_doli_keys)
+    doli = has_measure_with_prefix(word, prefixes_doli, prefixes_doli_keys, measures_with_prefixes, measures_with_prefixes_keys)
     if doli:
         return doli
-    kratn = has_measure_with_prefix(word, prefixes_kratn, prefixes_kratn_keys, measures_with_prefixes, measures_doli_keys)
+    kratn = has_measure_with_prefix(word, prefixes_kratn, prefixes_kratn_keys, measures_with_prefixes, measures_with_prefixes_keys)
     if kratn:
         return kratn
     if word in measures_keys:
@@ -63,15 +63,14 @@ def has_long(text):
 
 sokr, sokr_keys = read_csv("sokr")
 measures, measures_keys = read_csv("measures")
-measures_with_prefixes, measures_doli_keys = read_csv("measures_with_prefixes")
+measures_with_prefixes, measures_with_prefixes_keys = read_csv("measures_with_prefixes")
 phds, phds_keys = read_csv("phds")
 prefixes_doli, prefixes_doli_keys = read_csv("prefixes_doli")
 prefixes_kratn, prefixes_kratn_keys = read_csv("prefixes_kratn")
 
 
 def main():
-    print(has_sokr("года"))
-    print(has_long("кандидат технических наук и без рук"))
+    print(has_measure("микробеккерелей"))
 
 
 

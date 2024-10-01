@@ -6,13 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="5ee9fd0e-005e-4874-9584-cffd11cdb590" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csvs/measures_with_prefixes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csvs/measures_with_prefixes.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/generated_pairs/abbreviations1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/generated_pairs/symbols1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_count1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generated_pairs/symbols_count1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generated_pairs/symbols_sentences1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generated_pairs/symbols_sentences1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/long1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/long1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/measure1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/measure1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/sokr1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/sokr1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/generated_pairs/abbreviations2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/generated_pairs/abbreviations3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/generated_pairs/abbreviations4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/generated_pairs/abbreviations5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generated_pairs/abbreviations6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/generated_pairs/abbreviations6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/join_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/join_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_sokr.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_sokr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measures_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/measures_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/measure_final.csv" beforeDir="false" afterPath="$PROJECT_DIR$/res/measure_final.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wikisearch_stanza.py" beforeDir="false" afterPath="$PROJECT_DIR$/wikisearch_stanza.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,21 +43,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.join_files.executor&quot;: &quot;Run&quot;,
-    &quot;Python.make_sokr.executor&quot;: &quot;Run&quot;,
-    &quot;Python.reg.executor&quot;: &quot;Run&quot;,
-    &quot;Python.stanza_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.wikisearch.executor&quot;: &quot;Run&quot;,
-    &quot;Python.wikisearch_stanza.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/PyProjects/abbr_and_symb_datasets&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.join_files.executor": "Run",
+    "Python.make_sokr.executor": "Run",
+    "Python.measures_analysis.executor": "Run",
+    "Python.reg.executor": "Run",
+    "Python.stanza_test.executor": "Run",
+    "Python.wikisearch.executor": "Run",
+    "Python.wikisearch_stanza.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/PyProjects/abbr_and_symb_datasets"
   }
-}</component>
-  <component name="RunManager" selected="Python.wikisearch_stanza">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\PyProjects\abbr_and_symb_datasets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.make_sokr">
     <configuration name="join_files" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="abbr_and_symb_datasets" />
       <option name="ENV_FILES" value="" />
@@ -99,7 +109,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="reg" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="measures_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="abbr_and_symb_datasets" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,12 +118,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reg.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/measures_analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -192,19 +201,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.wikisearch" />
+      <item itemvalue="Python.measures_analysis" />
       <item itemvalue="Python.join_files" />
       <item itemvalue="Python.stanza_test" />
       <item itemvalue="Python.make_sokr" />
-      <item itemvalue="Python.reg" />
       <item itemvalue="Python.wikisearch_stanza" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.wikisearch_stanza" />
-        <item itemvalue="Python.join_files" />
-        <item itemvalue="Python.stanza_test" />
         <item itemvalue="Python.make_sokr" />
-        <item itemvalue="Python.reg" />
+        <item itemvalue="Python.join_files" />
+        <item itemvalue="Python.measures_analysis" />
+        <item itemvalue="Python.wikisearch_stanza" />
+        <item itemvalue="Python.stanza_test" />
       </list>
     </recent_temporary>
   </component>
