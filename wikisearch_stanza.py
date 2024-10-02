@@ -48,7 +48,7 @@ dict_res_measure = dict()
 dict_long = dict()
 dict_symbols = dict()
 
-generation = "5"
+generation = "4"
 
 file_abbreviations = open(f"generated_pairs/abbreviations{generation}.csv", "w+", encoding="utf-8")
 file_abbreviations.write("question,answer\n")
