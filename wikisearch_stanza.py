@@ -112,14 +112,14 @@ while True:
 
                 if new_sentence_abbr != sentence:
                     count_abbr += 1
-
+                    print(new_sentence_abbr)
+                    print(sentence)
                     file_abbreviations = open(f"generated_pairs/abbreviations{generation}.csv", "a", encoding="utf-8")
                     file_abbreviations.write(f'"{new_sentence_abbr}","{sentence}"\n')
                     #print("abbr: ", count_abbr)
                 if new_sentence_symb != sentence:
                     count_symb += 1
-                    print(new_sentence_abbr)
-                    print(sentence)
+
                     file_symbols = open(f"generated_pairs/symbols{generation}.csv", "a", encoding="utf-8")
                     file_symbols.write(f'"{new_sentence_symb}","{sentence}"\n')
                     #print("abbr: ", count_symb)
