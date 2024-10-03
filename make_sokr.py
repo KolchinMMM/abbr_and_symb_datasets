@@ -61,6 +61,9 @@ def has_long(text):
     return ""
 
 
+
+
+
 sokr, sokr_keys = read_csv("sokr")
 measures, measures_keys = read_csv("measures")
 measures_with_prefixes, measures_with_prefixes_keys = read_csv("measures_with_prefixes")
@@ -70,7 +73,7 @@ prefixes_kratn, prefixes_kratn_keys = read_csv("prefixes_kratn")
 
 
 def main():
-    print(has_measure("микробеккерелей"))
+    print(has_measure("километрами"))
 
 
 

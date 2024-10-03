@@ -35,6 +35,7 @@ def get_word_to_add(word):
 
     measure = has_measure(word_lower)
     if measure:
+        print(measure)
         if measure not in dict_res_measure.keys():
             dict_res_measure[measure] = 0
         dict_res_measure[measure] += 1
@@ -48,7 +49,7 @@ dict_res_measure = dict()
 dict_long = dict()
 dict_symbols = dict()
 
-generation = "4"
+generation = "6"
 
 file_abbreviations = open(f"generated_pairs/abbreviations{generation}.csv", "w+", encoding="utf-8")
 file_abbreviations.write("question,answer\n")
@@ -83,6 +84,7 @@ while True:
                 new_sentence_symb = ""
                 last_index = 0
                 for word_token in sentence_tokenized.words:
+                    print(word_token.text)
 
                     word_to_add_abbr = get_word_to_add(word_token.text)
                     word_to_add_symb = get_symbol(word_token.text)
