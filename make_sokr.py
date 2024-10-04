@@ -71,6 +71,7 @@ phds, phds_keys = read_csv("phds")
 prefixes_doli, prefixes_doli_keys = read_csv("prefixes_doli")
 prefixes_kratn, prefixes_kratn_keys = read_csv("prefixes_kratn")
 
+measures_short = set(measures_with_prefixes.values())
 
 def main():
     print(has_measure("километрами"))

@@ -24,14 +24,14 @@ def update_symbol_dict(sent):
         file_sentences_with_symbols.write(sent+"\n")
 
 
-def get_word_to_add(word):
+def get_word_to_add(word, last):
     word_lower = word.lower()
     sokr = has_sokr(word_lower)
     if sokr:
         if sokr not in dict_res_sokr.keys():
             dict_res_sokr[sokr] = 0
         dict_res_sokr[sokr] += 1
-        return sokr
+        return sokr, last
 
     measure = has_measure(word_lower)
     if measure:
@@ -39,9 +39,9 @@ def get_word_to_add(word):
         if measure not in dict_res_measure.keys():
             dict_res_measure[measure] = 0
         dict_res_measure[measure] += 1
-        return measure
+        return measure, True
 
-    return word
+    return word, last
 
 
 dict_res_sokr = dict()
@@ -49,11 +49,15 @@ dict_res_measure = dict()
 dict_long = dict()
 dict_symbols = dict()
 
-generation = "6"
+generation = "2"
 
 file_abbreviations = open(f"generated_pairs/abbreviations{generation}.csv", "w+", encoding="utf-8")
 file_abbreviations.write("question,answer\n")
 file_abbreviations.close()
+
+file_measures = open(f"generated_pairs/measures{generation}.csv", "w+", encoding="utf-8")
+file_measures.write("question,answer\n")
+file_measures.close()
 
 file_symbols = open(f"generated_pairs/symbols{generation}.csv", "w+", encoding="utf-8")
 file_symbols.write("question,answer\n")
@@ -82,14 +86,14 @@ while True:
                 sentence = sentence_tokenized.text
                 new_sentence_abbr = ""
                 new_sentence_symb = ""
+
+                flag_has_measure = False
+
                 last_index = 0
                 for word_token in sentence_tokenized.words:
-                    print(word_token.text)
-
-                    word_to_add_abbr = get_word_to_add(word_token.text)
+                    word_to_add_abbr, flag_has_measure = get_word_to_add(word_token.text, flag_has_measure)
                     word_to_add_symb = get_symbol(word_token.text)
-                    if word_to_add_symb != word_token.text:
-                        print(word_to_add_symb)
+
                     if last_index != word_token.start_char:
                         new_sentence_abbr += " "
                         new_sentence_symb += " "
@@ -113,18 +117,16 @@ while True:
                 another_text_symb = has_long_symbol(new_sentence_symb)
 
                 if new_sentence_abbr != sentence:
-                    count_abbr += 1
-                    print(new_sentence_abbr)
-                    print(sentence)
-                    file_abbreviations = open(f"generated_pairs/abbreviations{generation}.csv", "a", encoding="utf-8")
-                    file_abbreviations.write(f'"{new_sentence_abbr}","{sentence}"\n')
-                    #print("abbr: ", count_abbr)
+                    if flag_has_measure:
+                        file_measures = open(f"generated_pairs/measures{generation}.csv", "a", encoding="utf-8")
+                        file_measures.write(f'"{new_sentence_abbr}","{sentence}"\n')
+                        print(new_sentence_abbr)
+                    else:
+                        file_abbreviations = open(f"generated_pairs/abbreviations{generation}.csv", "a", encoding="utf-8")
+                        file_abbreviations.write(f'"{new_sentence_abbr}","{sentence}"\n')
                 if new_sentence_symb != sentence:
-                    count_symb += 1
-
                     file_symbols = open(f"generated_pairs/symbols{generation}.csv", "a", encoding="utf-8")
                     file_symbols.write(f'"{new_sentence_symb}","{sentence}"\n')
-                    #print("abbr: ", count_symb)
     except:
         write_dict_to_file(dict_res_measure, f"results/measure{generation}.csv", "abbreviation,encounters\n")
         write_dict_to_file(dict_res_sokr, f"results/sokr{generation}.csv", "abbreviation,encounters\n")
