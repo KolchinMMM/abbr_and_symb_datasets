@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ee9fd0e-005e-4874-9584-cffd11cdb590" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/results/long1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/long1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/long3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/long3.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/long5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/long5.csv" afterDir="false" />
@@ -14,6 +15,17 @@
       <change beforePath="$PROJECT_DIR$/results/sokr1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/sokr1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/sokr3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/sokr3.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/sokr5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/sokr5.csv" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/abbr_and_symb_datasets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/abbr_and_symb_datasets.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/long2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/long2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/long4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/long4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/measure2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/measure2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/measure4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/measure4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/sokr2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/sokr2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/sokr4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results/sokr4.csv" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/wikisearch_stanza.py" beforeDir="false" afterPath="$PROJECT_DIR$/wikisearch_stanza.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,21 +52,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.join_files.executor": "Run",
-    "Python.make_sokr.executor": "Run",
-    "Python.measures_analysis.executor": "Run",
-    "Python.reg.executor": "Run",
-    "Python.stanza_test.executor": "Run",
-    "Python.wikisearch.executor": "Run",
-    "Python.wikisearch_stanza.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/PyProjects/abbr_and_symb_datasets"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.join_files.executor&quot;: &quot;Run&quot;,
+    &quot;Python.make_sokr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.measures_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reg.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stanza_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.wikisearch.executor&quot;: &quot;Run&quot;,
+    &quot;Python.wikisearch_stanza.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/PyProjects/abbr_and_symb_datasets&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\PyProjects\abbr_and_symb_datasets" />
@@ -92,7 +104,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -159,7 +170,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (nlp_numbers_morpher)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -182,7 +192,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (nlp_numbers_morpher)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -217,7 +226,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
       </set>
     </attachedChunks>
   </component>
