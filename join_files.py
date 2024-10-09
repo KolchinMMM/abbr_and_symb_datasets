@@ -1,6 +1,7 @@
 import os
 import csv
 import re
+import random
 
 
 def read_csv(filename):
@@ -43,7 +44,8 @@ def process_count_dicts(name, arr, directory):
                     dict_s[key] = 0
                 print(key, value)
                 dict_s[key] += int(value)
-    write_csv(f"res/{name}_final.csv", dict_s)
+    dict_s = dict(sorted(dict_s.items(), key=lambda item: item[1], reverse=True))
+    write_csv(f"res/frequency/{name}.csv", dict_s)
 
 
 def preprocess(name, arr):
@@ -58,14 +60,31 @@ def preprocess(name, arr):
                         file.write(f"{v.replace('..', '.')}")
 
 
+def join_and_shuffle():
+    d = read_csv("res/measure_final.csv")
+    abbr = read_csv("res/abbreviation_final.csv")
+    count = 0
+    for i, v in abbr.items():
+        count += 1
+        d[i] = v
+        if count > 60000:
+            break
+    print(len(d))
+    d = list(d.items())
+    random.shuffle(d)
+    shuffled = dict(d)
+    write_csv("res/dataset1.csv", shuffled)
+
+
 directory_path = ""
 arr_generated_pairs = os.listdir(f"generated_pairs")
 arr_results = os.listdir(f"results")
-# preprocess("abbreviations", arr_generated_pairs)
+# preprocess("measure", arr_generated_pairs)
 
-# process("abbreviations", arr_generated_pairs, "generated_pairs/")
+#process("abbreviation", arr_generated_pairs, "generated_pairs/")
 
-process_count_dicts("sokr", arr_results, "results")
+# process_count_dicts("measure", arr_results, "results")
 
+join_and_shuffle()
 
 
