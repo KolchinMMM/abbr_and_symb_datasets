@@ -3,7 +3,7 @@ import re
 
 
 def read_csv(filename):
-    with open(f'csvs/{filename}.csv', encoding="utf-8") as file:
+    with open(f'../data/csvs/{filename}.csv', encoding="utf-8") as file:
         dictishe = dict(csv.reader(file, delimiter=","))
         keys = dictishe.keys()
         return dictishe, keys
@@ -40,6 +40,7 @@ def has_measure(word):
 
 
 def has_measure_with_prefix(word, prefix_dict, prefix_keys, measure_dict, measure_keys):
+    print(word, prefix_dict, prefix_keys, measure_dict, measure_keys)
     first_half = ""
     first_half_translated = ""
     for prefix in prefix_keys:
