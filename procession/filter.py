@@ -1,4 +1,3 @@
-from make_sokr import read_csv, has_measure
 from razdel import tokenize
 import csv
 
@@ -39,7 +38,6 @@ def main():
             file_to_write.write(f'"{line[0]}",{line[1]},"measure"\n')
 
     file_to_write.close()
-
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 import csv
-from make_sokr import read_csv
+from search_wiki.make_sokr import read_csv
 
 
 def print_dict(d):

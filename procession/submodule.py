@@ -1,6 +1,6 @@
 from razdel import tokenize
 
-from make_sokr import has_measure, sokr_keys, phds_keys
+from search_wiki.make_sokr import has_measure, sokr_keys, phds_keys
 
 
 def create_list_of_abbr(tokens):

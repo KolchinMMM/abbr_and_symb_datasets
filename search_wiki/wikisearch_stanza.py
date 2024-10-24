@@ -2,7 +2,7 @@ import stanza
 import wikipedia
 import warnings
 import re
-from make_sokr import has_sokr, has_measure, has_long
+from search_wiki.make_sokr import has_sokr, has_measure, has_long
 from procession.process_symbols import has_long_symbol, get_symbol
 
 
@@ -25,7 +25,7 @@ def update_symbol_dict(sent):
         if word not in dict_symbols.keys():
             dict_symbols[word] = 0
         dict_symbols[word] += 1
-        write_dict_to_file(dict_symbols, f"generated_pairs/symbols_count{generation}.txt", "")
+        write_dict_to_file(dict_symbols, f"../data/generated_pairs/symbols_count{generation}.txt", "")
     if flag_has:
         file_sentences_with_symbols.write(sent+"\n")
 
@@ -55,7 +55,7 @@ dict_res_measure = dict()
 dict_long = dict()
 dict_symbols = dict()
 
-generation = "1"
+generation = "5"
 
 file_abbreviations = open(f"../data/generated_pairs/abbreviations{generation}.csv", "w+", encoding="utf-8")
 file_abbreviations.write("question,answer\n")
@@ -123,10 +123,10 @@ while True:
                 another_text_symb = has_long_symbol(new_sentence_symb)
 
                 if new_sentence_abbr != sentence:
+                    print(new_sentence_abbr)
                     if flag_has_measure:
                         file_measures = open(f"../data/generated_pairs/measures{generation}.csv", "a", encoding="utf-8")
                         file_measures.write(f'"{new_sentence_abbr}","{sentence}"\n')
-                        print(new_sentence_abbr)
                     else:
                         file_abbreviations = open(f"../data/generated_pairs/abbreviations{generation}.csv", "a", encoding="utf-8")
                         file_abbreviations.write(f'"{new_sentence_abbr}","{sentence}"\n')

@@ -40,7 +40,6 @@ def has_measure(word):
 
 
 def has_measure_with_prefix(word, prefix_dict, prefix_keys, measure_dict, measure_keys):
-    print(word, prefix_dict, prefix_keys, measure_dict, measure_keys)
     first_half = ""
     first_half_translated = ""
     for prefix in prefix_keys:
@@ -71,13 +70,11 @@ measures_with_prefixes, measures_with_prefixes_keys = read_csv("measures_with_pr
 phds, phds_keys = read_csv("phds")
 prefixes_doli, prefixes_doli_keys = read_csv("prefixes_doli")
 prefixes_kratn, prefixes_kratn_keys = read_csv("prefixes_kratn")
-
 measures_short = set(measures_with_prefixes.values())
 
+
 def main():
-    print(has_measure("километрами"))
-
-
+    print(has_sokr("год"))
 
 
 if __name__ == "__main__":

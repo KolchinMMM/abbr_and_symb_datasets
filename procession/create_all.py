@@ -1,4 +1,4 @@
-from make_sokr import prefixes_doli, prefixes_kratn, measures_with_prefixes, sokr
+from search_wiki.make_sokr import prefixes_kratn, measures_with_prefixes, sokr
 
 
 all_abbr = set()
