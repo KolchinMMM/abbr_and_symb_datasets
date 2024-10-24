@@ -28,14 +28,14 @@ def check_for_measures(sentence):
 
 
 def main():
-    with open("../data/res/measure_final.csv", "r", encoding="utf-8", newline='') as file:
+    with open("../data/res/abbreviation_final.csv", "r", encoding="utf-8", newline='') as file:
         text = list(csv.reader(file, delimiter=','))
 
-    file_to_write = open("../data/res/updated/measure.csv", "w", encoding="utf-8")
+    file_to_write = open("../data/res/updated/abbr.csv", "w", encoding="utf-8")
     for line in text:
         if check_sentence(line[1]):
             # class_sentence = check_for_measures(line[0])
-            file_to_write.write(f'"{line[0]}",{line[1]},"measure"\n')
+            file_to_write.write(f'"{line[0]}","{line[1]}","sokr"\n')
 
     file_to_write.close()
 

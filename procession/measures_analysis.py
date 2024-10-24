@@ -21,13 +21,11 @@ for prefix in prefixes:
     count_prefixes[prefix] = 0
 
 
-with open("../data/res/measure_final.csv", "r", encoding="utf-8") as file:
+with open("measures.csv", "r", encoding="utf-8") as file:
     f = dict(csv.reader(file, delimiter=","))
 
-print(f)
 
 for key, value in f.items():
-    print(key, value)
     count = int(value)
     word = key
     if len(word) == 1:
@@ -41,7 +39,6 @@ for key, value in f.items():
                 count_prefixes[prefix] += count
                 word = word[len(prefix):]
                 break
-    print(word)
     if word in count_measures:
         if word in count_measures:
             count_measures[word] += count

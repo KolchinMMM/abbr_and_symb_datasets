@@ -55,7 +55,11 @@ dict_res_measure = dict()
 dict_long = dict()
 dict_symbols = dict()
 
+<<<<<<< Updated upstream
 generation = "5"
+=======
+generation = "11"
+>>>>>>> Stashed changes
 
 file_abbreviations = open(f"../data/generated_pairs/abbreviations{generation}.csv", "w+", encoding="utf-8")
 file_abbreviations.write("question,answer\n")
@@ -125,6 +129,7 @@ while True:
                 if new_sentence_abbr != sentence:
                     print(new_sentence_abbr)
                     if flag_has_measure:
+                        print(new_sentence_abbr)
                         file_measures = open(f"../data/generated_pairs/measures{generation}.csv", "a", encoding="utf-8")
                         file_measures.write(f'"{new_sentence_abbr}","{sentence}"\n')
                     else:

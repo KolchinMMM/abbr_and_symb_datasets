@@ -11,7 +11,7 @@ def read_csv(filename):
 
 
 def read_text(filename):
-    with open(f"data/generated_pairs/{filename}", "r", encoding="utf8", ) as file:
+    with open(f"../data/generated_pairs/{filename}", "r", encoding="utf8", ) as file:
         f = file.readlines()
         for i in f:
             a, b = i.rsplit(",")
@@ -29,7 +29,7 @@ def process(name, arr, directory):
     for path in arr:
         if re.search(name, path):
             dict_s = dict_s | read_csv(directory + path)
-    write_csv(f"data/res/{name}_final.csv", dict_s)
+    write_csv(f"../data/res/{name}_final.csv", dict_s)
 
 
 def process_count_dicts(name, arr, directory):
@@ -45,15 +45,15 @@ def process_count_dicts(name, arr, directory):
                 print(key, value)
                 dict_s[key] += int(value)
     dict_s = dict(sorted(dict_s.items(), key=lambda item: item[1], reverse=True))
-    write_csv(f"data/res/frequency/{name}.csv", dict_s)
+    write_csv(f"../data/res/frequency/{name}.csv", dict_s)
 
 
 def preprocess(name, arr):
     for path in arr:
         if re.search(name, path):
-            with open(f"data/generated_pairs/{path}", "r", encoding="utf-8") as file:
+            with open(f"../data/generated_pairs/{path}", "r", encoding="utf-8") as file:
                 buff = file.readlines()
-            with open(f"data/generated_pairs/{path}", "w", encoding="utf-8") as file:
+            with open(f"../data/generated_pairs/{path}", "w", encoding="utf-8") as file:
                 file.write("question,answer\n")
                 for i, v in enumerate(buff):
                     if v.count('"') == 4:
@@ -79,8 +79,8 @@ def join_and_shuffle():
 directory_path = ""
 arr_generated_pairs = os.listdir(f"../data/generated_pairs")
 arr_results = os.listdir(f"../data/results")
-# preprocess("measure", arr_generated_pairs)
-
+preprocess("measure", arr_generated_pairs)
+process("measure", arr_generated_pairs, "../data/generated_pairs/")
 #process("abbreviation", arr_generated_pairs, "generated_pairs/")
 
 # process_count_dicts("measure", arr_results, "results")
