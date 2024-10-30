@@ -55,11 +55,9 @@ dict_res_measure = dict()
 dict_long = dict()
 dict_symbols = dict()
 
-<<<<<<< Updated upstream
 generation = "5"
-=======
-generation = "11"
->>>>>>> Stashed changes
+
+
 
 file_abbreviations = open(f"../data/generated_pairs/abbreviations{generation}.csv", "w+", encoding="utf-8")
 file_abbreviations.write("question,answer\n")
