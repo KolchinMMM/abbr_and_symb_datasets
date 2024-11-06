@@ -1,6 +1,7 @@
 import os
 import re
 import csv
+import pandas as pd
 
 
 def write_csv(path, dictionary):
@@ -8,7 +9,6 @@ def write_csv(path, dictionary):
     with open(path, "w", encoding="utf-8") as file:
         for i, v in dictionary.items():
             file.write(f'"{i}","{v}"\n')
-            print("ahui")
 
 
 def read_file(path):
@@ -54,13 +54,51 @@ def join_files(name, arr, directory):
                     file_joined.write(r)
 
 
-arr_results = os.listdir(f"results/frequency")
-arr_data = os.listdir(f"results/data")
-# process_count_dicts("symbols_cased", arr_results, "results/frequency")
-# process_count_dicts("symbols_simple_reverse", arr_results, "results/frequency")
-join_files("case_symbols", arr_data, "results/data")
+def append_to_csv(name, sent1, sent2):
+    with open(f"results/joined/separated/symb_{name}.csv", "a", encoding="utf-8") as file:
+        sep = "'" if '"' in sent1 else '"'
+        file.write(f"{sep}{sent1}{sep},{sep}{sent2}{sep}\n")
 
-join_files("simple_symbols", arr_data, "results/data")
+def separate_cased():
 
-join_files("faulty", arr_data, "results/data")
-print(arr_results)
+    long = pd.read_csv("../data/csvs/symbols/symbols_long.csv")
+    long = set(long["abbr"])
+    short = pd.read_csv("../data/csvs/symbols/symbols.csv")
+    short = set(short["abbr"])
+
+    texts = pd.read_csv("results/joined/case_symbols.csv", delimiter=",").reset_index()
+    count = 0
+    for index, text in texts.iterrows():
+        # print(text)
+
+        flag = True
+        for l in long:
+            if l.lower() in text["question"].lower():
+                append_to_csv(l, text["question"], text["answer"])
+                flag = False
+                count += 1
+                break
+        if flag:
+            for s in short:
+                if s in text["question"].lower():
+                    append_to_csv(s, text["question"], text["answer"])
+                    count += 1
+                    break
+    print(count)
+
+
+def join():
+    arr_results = os.listdir(f"results/frequency")
+    arr_data = os.listdir(f"results/data")
+    process_count_dicts("symbols_cased", arr_results, "results/frequency")
+    process_count_dicts("symbols_simple_reverse", arr_results, "results/frequency")
+    join_files("case_symbols", arr_data, "results/data")
+
+    join_files("simple_symbols", arr_data, "results/data")
+
+    join_files("faulty", arr_data, "results/data")
+    print(arr_results)
+
+
+if __name__ == "__main__":
+    separate_cased()

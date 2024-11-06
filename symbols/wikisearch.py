@@ -54,7 +54,7 @@ cased_symbols = read_csv("../data/csvs/symbols/symbols.csv")
 long_cased_symbols = read_csv("../data/csvs/symbols/symbols_long.csv")
 
 
-generation = 5
+generation = 14
 # output for sentence pairs
 file_simple_symbols = open(f"results/data/simple_symbols{generation}.csv", "w", encoding="utf-8")
 file_simple_symbols.write("question,answer,count_simple,count_simple_translated,count_simple_long,count_simple_long_translated,count_cases_translated,count_cases_long\n")
@@ -243,9 +243,6 @@ def main():
                         write_end(f"results/data/simple_symbols{generation}.csv", to_write)
         except:
             pass
-
-
-
 
 
 if __name__ == "__main__":
