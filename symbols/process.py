@@ -1,5 +1,5 @@
 import csv
-import pymorphy2
+import pymorphy3
 import stanza
 
 dict_symbols = {
@@ -20,7 +20,7 @@ cases = "nomn gent datv accs ablt loct".split(' ')
 
 forms = "plur femn".split(' ')
 
-morph = pymorphy2.MorphAnalyzer()
+morph = pymorphy3.MorphAnalyzer()
 
 
 def read_csv(filename):

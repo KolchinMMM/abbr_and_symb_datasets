@@ -54,7 +54,7 @@ cased_symbols = read_csv("../data/csvs/symbols/symbols.csv")
 long_cased_symbols = read_csv("../data/csvs/symbols/symbols_long.csv")
 
 
-generation = 6
+generation = 7
 # output for sentence pairs
 file_simple_symbols = open(f"results/data/simple_symbols{generation}.csv", "w", encoding="utf-8")
 file_simple_symbols.write("question,answer,count_simple,count_simple_translated,count_simple_long,count_simple_long_translated,count_cases_translated,count_cases_long\n")
@@ -74,7 +74,7 @@ path_freq_simple_reverse = f"results/frequency/symbols_simple_reverse{generation
 
 dict_freq_cased_symbols = dict()
 path_freq_cased_symbols = f"results/frequency/symbols_cased{generation}.csv"
-
+stanza.download("ru")
 nlp = stanza.Pipeline("ru", download_method=None, use_gpu=True)
 
 
