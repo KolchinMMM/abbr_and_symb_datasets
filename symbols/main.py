@@ -1,2 +1,4 @@
-if sum((0, 1)):
-    print(True)
+import torch
+
+
+print(torch.cuda.is_available())
