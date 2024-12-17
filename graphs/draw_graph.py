@@ -4,15 +4,15 @@ from re_loss import get_loss
 
 plt.rcParams.update({'font.size': 18})
 
-def draw_plot(loss, eval_loss, title):
-    epoch = range(1, len(loss) + 1)
+def draw_plot(loss, eval_loss, title, step=1):
+    epoch = range(1, len(loss) + 1, step)
 
     plt.title(title, fontsize="x-large")
 
     plt.ylabel("Loss", fontsize="large")
     plt.xlabel("Epoch", fontsize="large")
-    plt.plot(epoch, loss, color='red', marker='o', markersize=5, label="train_loss")
-    plt.plot(epoch, eval_loss, color='green', marker='o', markersize=5, label="val_loss")
+    plt.plot(epoch, loss[::step], color='red', marker='o', markersize=5, label="train_loss")
+    plt.plot(epoch, eval_loss[::step], color='green', marker='o', markersize=5, label="val_loss")
 
     plt.legend(loc='upper right')
 
@@ -41,5 +41,5 @@ def draw_plot(loss, eval_loss, title):
 
     plt.show()
 
-train_rut5_small, valid_rut5_small = get_loss("data/loss/ruT5-base_short.txt")
-draw_plot(train_rut5_small, valid_rut5_small, "ruT5-base-multitask")
+train_rut5_small, valid_rut5_small = get_loss("data/fredt5.txt")
+draw_plot(train_rut5_small, valid_rut5_small, "FRED-T5-large")
